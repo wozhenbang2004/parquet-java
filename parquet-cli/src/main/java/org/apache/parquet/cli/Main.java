@@ -45,6 +45,7 @@ import org.apache.parquet.cli.commands.ColumnMaskingCommand;
 import org.apache.parquet.cli.commands.ColumnSizeCommand;
 import org.apache.parquet.cli.commands.ConvertCSVCommand;
 import org.apache.parquet.cli.commands.ConvertCommand;
+import org.apache.parquet.cli.commands.EncryptionInfoCommand;
 import org.apache.parquet.cli.commands.ParquetMetadataCommand;
 import org.apache.parquet.cli.commands.PruneColumnsCommand;
 import org.apache.parquet.cli.commands.RewriteCommand;
@@ -120,6 +121,7 @@ public class Main extends Configured implements Tool {
     jc.addCommand("trans-compression", new TransCompressionCommand(console));
     jc.addCommand("masking", new ColumnMaskingCommand(console));
     jc.addCommand("footer", new ShowFooterCommand(console));
+    jc.addCommand("encryption-info", new EncryptionInfoCommand(console));
     jc.addCommand("bloom-filter", new ShowBloomFilterCommand(console));
     jc.addCommand("scan", new ScanCommand(console));
     jc.addCommand("rewrite", new RewriteCommand(console));
